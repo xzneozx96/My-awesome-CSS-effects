@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-list {
+    position: relative;
+    margin: auto;
+    width: 480px;
+    height: 480px;
+    overflow: hidden;
+}
+.play-list .bg-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+}
+.play-list .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.play-list .overlay i {
+    font-size: 70px;
+    color: white;
+    transform: scale(0.8);
+    transition: transform 0.5s;
+}
+.play-list:hover .overlay {
+    opacity: 1;
+}
+.play-list:hover .overlay i {
+    transform: scale(1);
+}
+.play-list:hover .bg-img img {
+    transform: scale(1.1);
+}

@@ -1,0 +1,91 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+section.first-anniversary {
+    width: 100%;
+    height: 100%;
+}
+section.first-anniversary h1 {
+    font-family: 'Dancing Script', cursive;
+}
+section.first-anniversary h2 {
+    font-family: 'Bad Script', cursive;
+}
+.first-anniversary {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.first-anniversary h2 {
+    color: transparent;
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+.first-anniversary h2 span {
+    display: table-cell;
+    animation: glowing 1s linear infinite;
+}
+@keyframes glowing {
+    0%, 100% {
+        color: white;
+        filter: blur(2px); 
+    }   
+}
+.letter2.disappear {
+    opacity: 0;
+}
+
+.first-anniversary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, red,orange,yellow,green,blue,pink,#4B0082);
+    pointer-events: none;
+    mix-blend-mode: color;
+    z-index: 2;
+}
+.first-anniversary h1 {
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+    color: #ddd;
+    text-align: center;
+}
+.first-anniversary video {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.first-anniversary h1 span {
+    opacity: 0;
+    display: inline-block;
+    animation: animate 1s linear forwards;
+}
+@keyframes animate {
+    0%
+    {
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0px);
+    }
+}
